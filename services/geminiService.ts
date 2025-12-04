@@ -1,12 +1,11 @@
 import { GoogleGenAI } from "@google/genai";
 
 // Initialize Gemini
-// NOTE: In a real deployment, ensure process.env.API_KEY is set in your Netlify environment variables.
-const apiKey = process.env.API_KEY || ''; 
-const ai = new GoogleGenAI({ apiKey });
+// Always use process.env.API_KEY directly as per guidelines.
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const getConstructionAdvice = async (userQuery: string): Promise<string> => {
-  if (!apiKey) {
+  if (!process.env.API_KEY) {
     throw new Error("API Key is missing. Please configure the API_KEY environment variable.");
   }
 
