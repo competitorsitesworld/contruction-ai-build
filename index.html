@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structure & Form | Modern Construction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Manrope', 'sans-serif'],
+              display: ['Oswald', 'sans-serif'],
+            },
+            colors: {
+              industrial: {
+                50: '#f4f6f7',
+                100: '#e3e8eb',
+                200: '#c5d0d6',
+                300: '#9babbe',
+                400: '#768da1',
+                500: '#5a7185',
+                600: '#485a6b',
+                700: '#3c4a57',
+                800: '#343f49',
+                900: '#1a1f24',
+                950: '#0b0e11', // Deep dark industrial black
+              },
+              safety: {
+                DEFAULT: '#fbbf24', // amber-400
+                hover: '#f59e0b',   // amber-500
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Smooth scrolling for anchor links */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-industrial-50 text-industrial-900 antialiased selection:bg-safety selection:text-black">
+    <div id="root"></div>
+  </body>
+</html>
